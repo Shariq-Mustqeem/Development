@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shariq 1st layout</title>
+  </head>
+  <style>
+    /*03182950054*/
+    * {
+      margin: 0;
+      font-family: "Trebuchet MS";
+    }
+    .clearfix {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    #marble {
+      width: 100%;
+      height: 100px;
+      background-color: white;
+      box-sizing: border-box;
+      padding-left: 100px;
+      padding-top: 30px;
+      clear: both;
+    }
+    #marble img {
+      float: left;
+    }
+    #marble ul li {
+      float: right;
+      list-style: none;
+      color: #4e4e4e;
+      font-weight: 600;
+      margin: 15px;
+    }
+    .ulli {
+      margin-right: 70px;
+    }
+    #marbleul li::after hover {
+      cursor: pointer;
+      color: green;
+      transition-duration: 1s;
+    }
+    .logo img {
+      width: 100%;
+    }
+    .manfour {
+      text-align: center;
+      margin-top: 100px;
+      padding-bottom: 350px;
+      margin-left: 106px;
+      box-sizing: border-box;
+      clear: both;
+    }
+    .four1 {
+      float: left;
+      width: 24%;
+    }
+    .four1 h1 {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    .four1 p {
+      color: #4e4e4e;
+    }
+    .four2 {
+      float: left;
+      width: 23%;
+    }
+
+    .four2 h1 {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    .four2 p {
+      color: #4e4e4e;
+    }
+    .four3 {
+      float: left;
+      width: 23%;
+    }
+    .four3 h1 {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    .four3 p {
+      color: #4e4e4e;
+    }
+    .four4 {
+      float: left;
+      width: 23%;
+    }
+    .four4 h1 {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    .four4 p {
+      color: #4e4e4e;
+    }
+    .our-lastest-work {
+      margin-left: 30px;
+      box-sizing: border-box;
+      clear: both;
+    }
+    .our-lastest-work h1 {
+      margin-left: 93px;
+      margin-bottom: 30px;
+    }
+    .line {
+      width: 85%;
+      margin-left: 120px;
+      margin-bottom: 40px;
+      height: 2px;
+      background-color: #4e4e4e;
+    }
+    .one {
+      width: 24%;
+      float: left;
+      margin-right: 40px;
+      margin-left: 6%;
+    }
+    .one h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .one p {
+      margin-bottom: 150px;
+    }
+    .two {
+      width: 24%;
+      float: left;
+      margin-right: 40px;
+    }
+    .two h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .two p {
+      margin-bottom: 150px;
+    }
+    .three {
+      width: 24%;
+      float: left;
+      margin-right: 40px;
+    }
+    .three h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #6c6c6c;
+    }
+    .three p {
+      margin-bottom: 150px;
+    }
+    .koma {
+      width: 100%;
+      height: 250px;
+      background-color: #efefef;
+      clear: both;
+    }
+    .koma img {
+      margin-top: 60px;
+      margin-bottom: 26px;
+      /*text-align: center;*/
+      margin-left: 50%;
+    }
+    .koma p {
+      padding-bottom: 10px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .mustaqeem {
+      width: 100%;
+      height: 400px;
+      background-color: #1f1f1f;
+      clear: both;
+      padding-top: 50px;
+      padding-left: 107px;
+      box-sizing: border-box;
+    }
+    .muzammil {
+      width: 23%;
+      float: left;
+    }
+    .muzammil p {
+      margin-top: 29px;
+      color: white;
+    }
+    .muzammil h2 {
+      color: #6c6c6c;
+    }
+    #jack {
+      margin-top: 26px;
+    }
+    .musaddiq {
+      width: 23%;
+      float: left;
+    }
+    .musaddiq p {
+      margin-top: 8px;
+      color: white;
+    }
+    .musaddiq img {
+      margin-left: -22px;
+      /*margin-top: 20px;*/
+    }
+    .musaddiq h2 {
+      color: #6c6c6c;
+    }
+
+    #juck {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .shariq {
+      width: 23%;
+      float: left;
+    }
+    .shariq h2 {
+      margin-bottom: 26px;
+      color: #6c6c6c;
+    }
+    .shariq p {
+      color: white;
+    }
+    #market {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .abbas {
+      width: 23%;
+      float: left;
+      color: white;
+    }
+    .abbas h2 {
+      margin-bottom: 26px;
+      color: #6c6c6c;
+    }
+    #mask {
+      margin-top: 25px;
+      color: white;
+    }
+    .line1 {
+      width: 78%;
+      margin-left: 110px;
+      height: 2px;
+      background-color: white;
+      box-sizing: border-box;
+    }
+    .lastwork {
+      width: 100%;
+      height: 97px;
+      background-color: #1f1f1f;
+    }
+    .lastwork p {
+      padding-top: 38px;
+      padding-left: 110px;
+      color: white;
+    }
+  </style>
+  <body>
+    <div id="marble">
+      <img src="./image/logo.png" soon />
+      <ul class="ulli">
+        <li>CONTACT</li>
+        <li>FEATURES</li>
+        <li>SERVICES</li>
+        <li>JOURNAL</li>
+        <li>ABOUT</li>
+        <li>HOME</li>
+      </ul>
+    </div>
+    <div class="logo">
+      <img src="./image/background-image.png" />
+    </div>
+    <div class="manfour" class="clearfix">
+      <div class="four1">
+        <img src="./image/icon-1.png" />
+        <h1>Pellentesque</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic,
+          distinctio! Hic doloribus, odio mollitia accusamus cupiditate.
+        </p>
+      </div>
+
+      <div class="four2">
+        <img src="./image/icon-2.png" />
+        <h1>Consectetur</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic,
+          distinctio! Hic doloribus, odio mollitia accusamus cupiditate.
+        </p>
+      </div>
+
+      <div class="four3">
+        <img src="./image/icon-3.png" />
+        <h1>Tristiquet</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic,
+          distinctio! Hic doloribus, odio mollitia accusamus cupiditate.
+        </p>
+      </div>
+
+      <div class="four4">
+        <img src="./image/icon-4.png" />
+        <h1>Fermentum</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic,
+          distinctio! Hic doloribus, odio mollitia accusamus cupiditate.
+        </p>
+      </div>
+    </div>
+    <hr class="line" />
+    <div class="our-lastest-work">
+      <h1>OUR LASTEST WORKS</h1>
+      <div class="one">
+        <img src="./image/snap-1.png" />
+        <h2>Nobis Business Card</h2>
+        <p>
+          Sed posuere consectetur est at lobortis.Porta sagittis lacus vel augue
+          laoreet rutrum
+        </p>
+      </div>
+      <div class="two">
+        <img src="./image/snap-3.png" />
+        <h2>New Fun Project</h2>
+        <p>Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
+      </div>
+      <div class="three">
+        <img src="./image/snap-3.png" />
+        <h2>Passionaries Branding Cover</h2>
+        <p>Curabitur blandit tempus porttitor. Donec id elit non mi porta</p>
+      </div>
+    </div>
+    <div class="koma">
+      <img src="./image/quote.png" />
+      <p>
+        Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi
+        porta gravida at <br />
+        eget metus. Duis mollis, est non commodo luctus erat porttitor.
+      </p>
+    </div>
+    <div class="mustaqeem clearfix">
+      <div class="muzammil">
+        <h2>Get In Touch</h2>
+        <p>
+          Fusce dapibus, tellus commodo, tortor <br />
+          mauris condimentum utellus fermentum,<br />
+          porta sem malesuada magna.
+        </p>
+        <p id="jack">
+          Moonshine Street No: 14/05<br />
+          Light City, Jupiter<br />
+          0247 541 65 87<br />
+          support@longwave.com
+        </p>
+      </div>
+      <div class="musaddiq">
+        <h2>Twitter</h2>
+        <img src="./image/tweet.png" />
+        <p>
+          Aenean lacinia bibendum nulla sed leobr <br />
+          posuere erat a ante venenatis dapibus <br />
+          posuere velit aliquet.
+        </p>
+        <img src="./image/tweet.png" />
+        <p id="juck">
+          Donec ullamcorper metus auctor <br />
+          fringilla. Nullam quis risus eget.
+        </p>
+        <img src="./image/tweet.png" />
+        <p>
+          Vestibulum id ligula porta euismod <br />
+          semper. Maecenas faucibus mollis.
+        </p>
+        <img src="./image/tweet.png" />
+      </div>
+      <div class="shariq">
+        <h2>Popular Posts</h2>
+        <p>
+          Vivamus sagittis lacus vel augue <br />
+          laoreet rutrum dolor auctor.<br />
+          14 Nov, 2012
+        </p>
+        <p id="market">
+          Scelerisque nisl consectetur et.<br />
+          22 May, 2012
+        </p>
+        <p>
+          Pellentesque ornare sem lacinia <br />
+          quam venenatis <br />
+          vestibulum. Fusce 15 July, 2012
+        </p>
+      </div>
+      <div class="abbas">
+        <h2>About Us</h2>
+        <p>
+          Vestibulum id ligula porta felis euismod <br />
+          semper. Duis mollis, est non commodo <br />
+          luctus, nisi erat porttitor ligula,<br />
+          eget lacinia odio sem nec elit.
+        </p>
+        <p id="mask">
+          Cum sociis natoque penatibus et magnis <br />
+          dis parturient montes, nascetur ridiculus <br />
+          mus curabitur blandit tempus.
+        </p>
+      </div>
+    </div>
+
+    <div class="lastwork">
+      <hr class="line1" />
+      <p>© 2013 Marble. All rights reserved. Theme by elemis.</p>
+    </div>
+  </body>
+</html>

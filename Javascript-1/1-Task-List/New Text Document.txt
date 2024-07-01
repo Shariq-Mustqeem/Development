@@ -1,0 +1,41 @@
+//Task Add
+const taskForm = document.querySelector("#task-form");
+const inputfeild = document.querySelector("#task");
+const collection = document.querySelector(".collection");
+const clearTasks = document.querySelector(".clear-tasks");
+// console.log(clearTasks, "clearTasks");
+
+taskForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const inputfeildValue = inputfeild.value;
+  if (!inputfeildValue) {
+    return alert("please fill the input feild");
+  }
+  const htmlList = `<a class="delete-item secondary-content"
+  ><i class="fa fa-remove"></i
+></a>`;
+  const createLi = document.createElement("li");
+  createLi.className = "collection-item";
+  createLi.innerHTML += `${inputfeildValue} ${htmlList}`;
+  collection.append(createLi);
+  inputfeild.value = "";
+});
+
+//Delete Work
+collection.addEventListener("click", function (e) {
+  e.preventDefault();
+  const currentElement = e.target; // jis per click karo wo ayee bs
+  // console.log(currentElement.className, "currentElement");
+  if (currentElement.className == "fa fa-remove" && confirm("Are you sure")) {
+    currentElement.parentElement.parentElement.remove();
+  }
+});
+
+//Clear Task
+
+clearTasks.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (confirm("Are you sure")) {
+    collection.innerHTML = "";
+  }
+});
