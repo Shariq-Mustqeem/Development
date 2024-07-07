@@ -1,0 +1,22 @@
+.custom-register-style {
+  margin: "70px 0px";
+}
+.custom-button-style button {
+  color: #fff;
+  background-color: #67e71c;
+  border: none;
+  width: 100%;
+  height: 45px;
+  font-weight: 600;
+}
+
+.approve {
+  padding: 5px 10px;
+  width: 90%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background-color: red;
+}

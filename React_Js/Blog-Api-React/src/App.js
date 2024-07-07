@@ -1,25 +1,27 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/Layout/HomePage";
-import FrontendDeveloper from "./pages/Layout/FrontendDeveloper";
-import PostDetail from "./pages/Layout/PostDetail";
-import { AUTHENTICATED_ROUTES, UNAUTHENTICATED_ROUTES } from "./utils/constant";
-import "./App.css";
+import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
-import CategoryDetail from "./pages/Layout/CategoryDetail";
-import SearchDetail from "./pages/Layout/SearchDetail";
-import Register from "./pages/Layout/Register";
-import Login from "./pages/Layout/Login";
-import AdminLayout from "./pages/Admin/Layout/AdminLayout";
+import "./App.css";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import FrontendDeveloper from "./Layout/FrontendDeveloper/FrontendDeveloper";
+import HomePage from "./Layout/HomePage/HomePage";
+import {
+  AUTHENTICATED_ROUTES,
+  UNAUTHENTICATED_ROUTES,
+} from "./utils/constants";
+import PostDetail from "./Layout/PostDetail/PostDetail";
+import CategoryDetail from "./Layout/CategoryDetail/CategoryDetail";
+import Register from "./Layout/Register/Register";
+import Login from "./Layout/Login/Login";
 import { AuthService } from "./utils/auth.service";
-import AdmitCategories from "./pages/Admin/Layout/AdmitCategories";
-import AdmitPosts from "./pages/Admin/Layout/AdmitPosts";
-import AdmitUsers from "./pages/Admin/Layout/AdmitUsers";
-import AdmitAddCategory from "./pages/Admin/Layout/AdmitAddCategory";
-import AdmitAddPosts from "./pages/Admin/Layout/AdmitAddPosts";
-import AdmitAddUsers from "./pages/Admin/Layout/AdmitAddUsers";
-import AdminComments from "./pages/Admin/Layout/AdminComments";
-import Dashboard from "./pages/Admin/Layout/Dashboard";
-import AdmitEditCategory from "./pages/Admin/Layout/AdmitEditCategory";
+import AdminLayout from "./Layout/AdminLayout/AdminLayout";
+import Dashboard from "./Layout/AdminLayout/Dashboard/Dashboard";
+import AdminCategory from "./Layout/AdminLayout/AdminCategory/AdminCategory";
+import AdminPosts from "./Layout/AdminLayout/AdminPosts/AdminPosts";
+import AdminComments from "./Layout/AdminLayout/AdminComments/AdminComments";
+import AdminUsers from "./Layout/AdminLayout/AdminUsers/AdminUsers";
+import AdminAddCategory from "./Layout/AdminLayout/AdminCategory/AdminAddCategory";
+import AdminAddUsers from "./Layout/AdminLayout/AdminUsers/AdminAddUsers";
+import AdminAddPosts from "./Layout/AdminLayout/AdminPosts/AdminAddPosts";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,7 +35,7 @@ const queryClient = new QueryClient({
   },
 });
 function App() {
-  const isUserLoggedIn = AuthService.isUserLoginIn();
+  const isUserIsLoggedIn = AuthService.isUserLoggedIn();
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
@@ -41,16 +43,12 @@ function App() {
           <Route element={<FrontendDeveloper />}>
             <Route path={UNAUTHENTICATED_ROUTES.HOME} element={<HomePage />} />
             <Route
-              path={UNAUTHENTICATED_ROUTES.POST_DETAIL}
+              path={UNAUTHENTICATED_ROUTES.POSTS}
               element={<PostDetail />}
             />
             <Route
-              path={UNAUTHENTICATED_ROUTES.CATEGORY_DETAIL}
+              path={UNAUTHENTICATED_ROUTES.CATEGORY}
               element={<CategoryDetail />}
-            />
-            <Route
-              path={UNAUTHENTICATED_ROUTES.SEARCH_DETAIL}
-              element={<SearchDetail />}
             />
             <Route
               path={UNAUTHENTICATED_ROUTES.REGISTER}
@@ -59,7 +57,7 @@ function App() {
             <Route path={UNAUTHENTICATED_ROUTES.LOGIN} element={<Login />} />
           </Route>
 
-          {isUserLoggedIn && (
+          {isUserIsLoggedIn && (
             <Route element={<AdminLayout />}>
               <Route
                 path={AUTHENTICATED_ROUTES.DASHBOARD}
@@ -67,32 +65,44 @@ function App() {
               />
               <Route
                 path={AUTHENTICATED_ROUTES.CATEGORIES}
-                element={<AdmitCategories />}
+                element={<AdminCategory />}
               />
+
               <Route
                 path={AUTHENTICATED_ROUTES.ADD_CATEGORY}
-                element={<AdmitAddCategory />}
+                element={<AdminAddCategory />}
               />
               <Route
                 path={AUTHENTICATED_ROUTES.EDIT_CATEGORY}
-                element={<AdmitEditCategory />}
+                element={<AdminAddCategory />}
               />
               <Route
                 path={AUTHENTICATED_ROUTES.USERS}
-                element={<AdmitUsers />}
+                element={<AdminUsers />}
               />
               <Route
                 path={AUTHENTICATED_ROUTES.ADD_USERS}
-                element={<AdmitAddUsers />}
+                element={<AdminAddUsers />}
+              />
+              <Route
+                path={AUTHENTICATED_ROUTES.EDIT_USERS}
+                element={<AdminAddUsers />}
               />
               <Route
                 path={AUTHENTICATED_ROUTES.POSTS}
-                element={<AdmitPosts />}
+                element={<AdminPosts />}
               />
+
               <Route
                 path={AUTHENTICATED_ROUTES.ADD_POSTS}
-                element={<AdmitAddPosts />}
+                element={<AdminAddPosts />}
               />
+
+              <Route
+                path={AUTHENTICATED_ROUTES.EDIT_POSTS}
+                element={<AdminAddPosts />}
+              />
+
               <Route
                 path={AUTHENTICATED_ROUTES.COMMENTS}
                 element={<AdminComments />}

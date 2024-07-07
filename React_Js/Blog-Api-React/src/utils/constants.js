@@ -1,8 +1,7 @@
 export const UNAUTHENTICATED_ROUTES = {
   HOME: "/",
-  POST_DETAIL: "/post/:postId",
-  CATEGORY_DETAIL: "/category/:catId",
-  SEARCH_DETAIL: "/search/:query",
+  POSTS: "/posts",
+  CATEGORY: "/category/:catId",
   REGISTER: "/register",
   LOGIN: "/login",
 };
@@ -11,10 +10,13 @@ export const AUTHENTICATED_ROUTES = {
   DASHBOARD: "/admin/dashboard",
   CATEGORIES: "/admin/categories",
   ADD_CATEGORY: "/admin/categories/add",
-  EDIT_CATEGORY: "/admin/categories/edit/:categoryId",
+  EDIT_CATEGORY: "/admin/categories/edit/:catId",
   USERS: "/admin/users",
   ADD_USERS: "/admin/users/add",
+  EDIT_USERS: "/admin/users/edit/:userId",
   POSTS: "/admin/posts",
   ADD_POSTS: "/admin/posts/add",
+  EDIT_POSTS: "/admin/posts/edit/:postId",
   COMMENTS: "/admin/comments",
+  ADD_COMMENTS: "/admin/comments/add",
 };

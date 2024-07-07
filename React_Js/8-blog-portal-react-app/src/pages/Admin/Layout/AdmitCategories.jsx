@@ -48,8 +48,22 @@ function AdmitCategories() {
     {
       title: "Edit",
       key: "edit",
-      render: () => {
-        return <Button type="primary">Edit</Button>;
+      render: (row) => {
+        return (
+          <Button
+            type="primary"
+            onClick={(row) =>
+              navigate(
+                AUTHENTICATED_ROUTES.EDIT_CATEGORY.replace(
+                  ":categoryId",
+                  row?.cat_id
+                )
+              )
+            }
+          >
+            Edit
+          </Button>
+        );
       },
     },
     {
