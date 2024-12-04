@@ -24,6 +24,7 @@ function AdminCategory() {
 
   const { mutateAsync: deleteCategroyRequest, isLoading: deleteLoader } =
     useMutation("deleteRequest", CategoryService.deleteCategoryById);
+
   const deleteCategory = (row) => {
     const catId = row.cat_id;
     confirm({
@@ -42,6 +43,7 @@ function AdminCategory() {
       },
     });
   };
+
   const columns = [
     {
       title: "Id",

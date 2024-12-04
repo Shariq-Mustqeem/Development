@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/app/components/*"],
+      "container/*": ["src/app/container/*"],
+      "context-api/*": ["src/app/context-api/*"],
+      "hooks/*": ["src/app/hooks/*"],
+      "imageConstant/*": ["src/app/imageConstant/*"],
+      "serviceEndPoints/*": ["src/app/serviceEndPoints/*"],
+      "services/*": ["src/app/services/*"],
+      "utils/*": ["src/app/utils/*"]
+    }
+  }
+}

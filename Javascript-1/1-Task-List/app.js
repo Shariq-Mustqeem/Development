@@ -13,10 +13,10 @@ taskForm.addEventListener("submit", function (e) {
 
   const liCreate = document.createElement("li");
   liCreate.className = "collection-item";
-  liCreate.innerHTML += `${taskInputValue} ${deleteHTML}`;
-  console.log(liCreate, "ASDAS");
-  collectionTask.append(liCreate);
+  console.log(liCreate, "asdas");
 
+  liCreate.innerHTML += `${taskInputValue} ${deleteHTML}`;
+  collectionTask.append(liCreate);
   taskInput.value = "";
 });
 
@@ -38,7 +38,6 @@ filter.addEventListener("keyup", function (e) {
   const filterInputfeild = currentElemet.value.toLowerCase();
   const allCollectionItems = document.querySelectorAll(".collection-item");
   allCollectionItems.forEach(function (singleSearch) {
-    console.log(singleSearch, "singleSearch");
     if (singleSearch.innerText.toLowerCase().indexOf(filterInputfeild) === -1) {
       singleSearch.style.display = "none";
     } else {

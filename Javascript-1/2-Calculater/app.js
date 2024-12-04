@@ -44,37 +44,37 @@
 //   return /[a-zA-z]+$/.test(string);
 // }
 
-// const selectBtns = document.querySelector(".buttons");
-// const screenInput = document.querySelector(".screen");
-// const btnClear = document.querySelector(".btn-clear");
-// const btnEqual = document.querySelector(".btn-equal");
+const selectBtns = document.querySelector(".buttons");
+const screenInput = document.querySelector(".screen");
+const btnClear = document.querySelector(".btn-clear");
+const btnEqual = document.querySelector(".btn-equal");
 
-// selectBtns.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   const currentElement = e.target;
-//   if (currentElement.classList.contains("btn")) {
-//     const dataNum = currentElement.getAttribute("data-num");
-//     screenInput.value += dataNum;
-//   }
-// });
+selectBtns.addEventListener("click", function (e) {
+  e.preventDefault();
+  const currentElement = e.target;
+  if (currentElement.classList.contains("btn")) {
+    const dataNum = currentElement.getAttribute("data-num");
+    screenInput.value += dataNum;
+  }
+});
 
-// btnClear.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   screenInput.value = 0;
-// });
+btnClear.addEventListener("click", function (e) {
+  e.preventDefault();
+  screenInput.value = 0;
+});
 
-// btnEqual.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   screenInput.value = eval(screenInput.value);
-// });
+btnEqual.addEventListener("click", function (e) {
+  e.preventDefault();
+  screenInput.value = eval(screenInput.value);
+});
 
-// screenInput.addEventListener("input", function (e) {
-//   e.preventDefault();
-//   const currentElement = e.target;
-//   if (testOnlyLetters(currentElement.value)) {
-//     screenInput.value = "";
-//   }
-// });
-// function testOnlyLetters(string = "") {
-//   return /[a-zA-Z]+$/.test(string);
-// }
+screenInput.addEventListener("input", function (e) {
+  e.preventDefault();
+  const currentElement = e.target;
+  if (testOnlyLetters(currentElement.value)) {
+    screenInput.value = "";
+  }
+});
+function testOnlyLetters(string = "") {
+  return /[a-zA-Z]+$/.test(string);
+}

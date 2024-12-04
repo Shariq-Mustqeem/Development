@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "container/*": ["container/*"],
+            "contextApi/*": ["context-api/*"],
+            "components/*": ["components/*"],
+            "hooks/*": ["hooks/*"],
+            "utils/*": ["utils/*"],
+            "imageConstant/*": ["image-constant/*"],
+            "serviceEndPoints/*": ["service-end-point/*"],
+            "service/*": ["service/*"],
+            "assets/*": ["assets/*"],
+            "routes/*": ["routes/*"]
+        }
+    },
+    "include": ["src/**/*"]
+}

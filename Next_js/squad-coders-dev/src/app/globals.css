@@ -1,0 +1,416 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+body {
+  width: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+  transition: all ease 300ms;
+  text-decoration: none;
+  font-family: "Urbanist", sans-serif !important;
+  font-weight: 500;
+  color: black;
+  letter-spacing: 0.5px;
+  font-variant: tabular-nums;
+  background-color: #f8f8f8;
+  overflow-x: hidden;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.background-image-dev {
+  background-image: url("../assets/mask.png");
+  background-size: 100% 100%;
+}
+.background-image-about {
+  background-image: url("../assets/about-mask.png");
+}
+.background-image-contact {
+  background-image: url("../assets/about-mask.png");
+}
+.h-contactShape {
+  background-image: url("../assets/contactShape.png") !important;
+  background: repeat no-repeat;
+  background-size: 100% 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+.h-shape {
+  background-image: url("../assets/oShape.png") !important;
+  background: repeat no-repeat;
+  background-size: 100% 100%;
+  height: auto;
+  margin-top: 15px;
+  padding-bottom: 100px;
+}
+.skillsIcon {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 27px;
+  justify-content: space-between;
+}
+
+.skillsIcon img {
+  background-color: #fff;
+  width: 23.2%;
+  margin-top: 40px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.custom-purple-button {
+  margin-top: 16px;
+  padding: 21px 27px;
+  font-size: 16px;
+  color: #6b21a8;
+  border-radius: 0;
+  border: none;
+}
+.custom-white-button {
+  padding: 21px 27px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  background-color: #993795;
+}
+
+.custom-input-style > * {
+  margin-bottom: 26px;
+  border-radius: 0px;
+}
+.custom-top-space nav ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.custom-top-space nav ul li:first-child {
+  margin-bottom: 33px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.custom-hr {
+  max-width: 100%;
+  border: 1px solid white;
+}
+.custom-light-hr {
+  max-width: 100%;
+  border: 1px solid #d1d5db;
+}
+#header-menu-section {
+  display: none;
+}
+#menu-section {
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 6s linear infinite;
+}
+@media only screen and (max-width: 1250px) {
+  .skillsIcon img {
+    width: 22%;
+  }
+  .about-us > div > div img {
+    max-width: 140px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) {
+  .skillsIcon img {
+    width: 30.5%;
+  }
+  .h-shape {
+    padding-bottom: 60px;
+  }
+
+  .future-section > div {
+    padding-top: 135px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .main-social-media-information > div:last-child > div {
+    margin-left: 0px;
+  }
+  #nav-header-section {
+    display: none;
+  }
+  #menu-section {
+    display: block;
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  .social-media-information {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+  .h-shape {
+    padding-bottom: 1px;
+    background-size: 130% 130%;
+    margin-top: 30px;
+  }
+  .academics-section > div:first-child {
+    margin-left: -90px !important;
+  }
+  #header-nav-section {
+    display: none;
+  }
+  #header-menu-section {
+    display: block;
+  }
+  .future-section > div {
+    padding-top: 142px;
+    gap: 0px;
+  }
+  .future-section .over-come {
+    font-size: 20px;
+  }
+  .future-section .software-heading {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .future-section > div > div > p {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .future-section .custom-purple-button {
+    margin-top: 14px;
+    padding: 19px 25px;
+    font-size: 15px;
+  }
+  && .ant-drawer-body,
+  &&
+    :where(.css-dev-only-do-not-override-qnu6hi).ant-drawer
+    .ant-drawer-content {
+    background-color: #603676 !important;
+  }
+
+  && :where(.css-dev-only-do-not-override-qnu6hi).ant-drawer .ant-drawer-mask {
+    background: transparent !important;
+  }
+
+  && .ant-drawer .ant-drawer-content-wrapper {
+    box-shadow: transparent !important;
+    width: 100% !important;
+    max-width: unset !important;
+  }
+
+  && :where(.css-dev-only-do-not-override-qnu6hi).ant-modal {
+    width: 80% !important;
+    height: 80% !important;
+    transform-origin: center !important;
+    margin: 0 auto !important;
+    top: 13%;
+  }
+
+  && .ant-modal-content {
+    height: 40vw;
+    background-color: transparent !important;
+  }
+
+  && .ant-modal-body {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-social-media-information {
+    margin-top: 60px;
+    height: auto;
+  }
+  .social-media-information {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .social-media-information ul > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  img.bg-cover.mb-5 {
+    margin: 0 auto;
+  }
+  .h-contactShape {
+    background-size: 170% 100%;
+  }
+  .custom-white-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 22px 0px;
+  }
+  .skillsIcon img {
+    width: 47.5%;
+  }
+  .contact-us-section > div:last-child > div > div > hr {
+    margin-top: 0px !important;
+  }
+  .demo-videos-section > div:last-child > div > div > div > hr {
+    margin-top: 0px !important;
+  }
+  .academics-section > div:first-child {
+    display: none;
+  }
+
+  .academics-section > div:last-child > div > div h1 {
+    font-size: 23px;
+  }
+  .academics-section > div:last-child > div > div > h1 {
+    font-size: 23px;
+  }
+  .about-us > div > div img {
+    max-width: 120px;
+  }
+  .about-us > div > div h1 {
+    font-size: 25px;
+  }
+  .about-us > div > div hr {
+    margin: 10px 0px;
+  }
+  .about-us > div:last-child p {
+    font-size: 15px;
+  }
+  .background-image-dev {
+    background-size: auto !important;
+  }
+  .future-section > div {
+    display: block !important;
+  }
+  .future-section > div > div {
+    max-width: 100%;
+    margin-top: -40px;
+    align-items: center;
+  }
+  .future-section > div > div img {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+  .future-section .software-heading {
+    font-size: 24px;
+  }
+  .future-section > div > div > p {
+    font-size: 13px;
+    margin-top: 3px;
+  }
+  .future-section .custom-purple-button {
+    margin-bottom: 46px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .skillsIcon img {
+    width: 100%;
+  }
+  .demo-video-heading {
+    font-size: 1.6rem;
+  }
+  .about-us > div > div img {
+    max-width: 100px;
+  }
+  .about-us > div > div h1 {
+    font-size: 22px;
+  }
+  .about-us > div > div img {
+    margin: 0 auto;
+    max-width: 90px;
+  }
+  .about-us > div:last-child p {
+    font-size: 14px;
+  }
+  .future-section .software-heading {
+    font-size: 20px;
+    text-align: center;
+  }
+  .future-section > div > div > p {
+    font-size: 11px;
+    text-align: center;
+  }
+  .future-section .custom-purple-button {
+    padding: 14px 17px;
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .about-us > div > div h1 {
+    font-size: 19px;
+  }
+  .about-us > div:last-child p {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .social-media-information {
+    padding-top: 50px;
+  }
+  .demo-video-heading {
+    font-size: 1.2rem;
+  }
+  .demo-vide-images {
+    width: 50px;
+  }
+  .about-us > div > div {
+    display: block;
+    justify-content: center !important;
+    text-align: center;
+  }
+  .about-us > div:last-child p {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .future-section .demo-video-heading {
+    font-size: 1rem;
+  }
+  .academics-section > div:last-child {
+    display: block;
+    text-align: center;
+  }
+  .academics-section > div:last-child > div > div {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 320px) {
+}
+@media only screen and (max-width: 280px) {
+}
