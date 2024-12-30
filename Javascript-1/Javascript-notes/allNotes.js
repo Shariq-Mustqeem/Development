@@ -201,7 +201,7 @@ testing_variable = new String(true); // "true"
 let someVariable = 1;
 
 testing_variable = someVariable.toString(); // "1"
-testing_variable = (1222222).String(); // "ASDASD"
+testing_variable = (1222222).toString(); // "ASDASD"
 
 // Boolean methodstoString(); // "1"
 testing_variable = "asdasd".toUpperCase;
@@ -293,8 +293,8 @@ const fullName = firstName + " " + lastName;
 
 // "asdfasdfasdfasdf " + variableName
 // `asdfasdfasdfasdf ${variableName}`;
-let testString = `Hello, World my name 
-  
+let testString = `Hello, World my name
+
   is'${fullName} and my age "is 26`;
 
 testString = testString.concat(
@@ -610,8 +610,6 @@ const simpleObject = {
 simpleObject.keyFirst();
 simpleObject.keySecond(20);
 
-//Closures
-
 //Global = azad
 let a = 4;
 function myFunction() {
@@ -697,13 +695,13 @@ const companyName = "xyz";
 // companyName = "asdasd"; //error
 
 /*
-  
+
   If you use var outside of a function, it belongs to the global scope.
-  
+
   If you use var inside of a function, it belongs to that function.
-  
+
   If you use var inside of a block, i.e. a for loop, the variable is still available outside of that block.
-  
+
   */
 
 // var muzammil = "working";
@@ -763,7 +761,7 @@ const products = [
 //foreach method will take default: 3.034912109375 ms
 
 /*
-  
+
   -Loop Methods
   map
   filter
@@ -773,7 +771,7 @@ const products = [
   find
   findIndex
   reduce
-  
+
   -Array Changes method
   push
   pop
@@ -1179,8 +1177,8 @@ selectParentActionElement.replaceChild(newHeading, oldElement); //replace kardo 
 
 //Event Listner
 
-/* In JavaScript, an event listener is a function that waits for a specific event to occur 
-  and then responds to that event. Events can be various user interactions with a web page, 
+/* In JavaScript, an event listener is a function that waits for a specific event to occur
+  and then responds to that event. Events can be various user interactions with a web page,
   such as clicking a button, moving the mouse, pressing a key, submitting a form, etc. */
 
 const clearTaskButton = document.querySelector(".clear-tasks");
@@ -1194,10 +1192,10 @@ const clearTaskButton = document.querySelector(".clear-tasks");
 
 /*
   mouseover vs mouseenter
-  The mouseover event triggers when the mouse pointer enters the div element, 
-  and its child elements. The mouseenter event is only triggered 
+  The mouseover event triggers when the mouse pointer enters the div element,
+  and its child elements. The mouseenter event is only triggered
   when the mouse pointer enters the div element.
-  
+
   */
 
 //input field events
@@ -1338,7 +1336,7 @@ PersonFour.genericHello(); //call function without initialize
   Abstraction = Chupa wa
   Polymorphism = talk with multiple
   Encapsulation = properties wali chizen public/private
-  
+
   in javascript one more thing Prototype Inheritance
   */
 
@@ -1737,21 +1735,21 @@ doSomethingAsyncMethod();
 
 /*
   REQUEST METHODS
-  
+
   GET = get data
-  POST = store/create data   
+  POST = store/create data
   PUT = update data
   PATCH = partially update date
-  DELETE = delete data 
-  
+  DELETE = delete data
+
   */
 //
 
-/*  
+/*
   Rest Api Pattern
-  
+
   Request Methods
-  
+
   GET	    /posts              (get all posts)
   GET	    /posts/1            (get post by id)
   GET	    /comments?postId=1  (get post comments by postId)
@@ -1759,5 +1757,5 @@ doSomethingAsyncMethod();
   PUT	    /posts/1            (update specific post with all data like title,body)
   PATCH	  /posts/1            (update specific post partially with some data like only title or body)
   DELETE  /posts/1            (delete post by id)
-  
+
   */

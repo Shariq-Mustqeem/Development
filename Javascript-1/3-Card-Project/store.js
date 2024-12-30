@@ -5,8 +5,6 @@ const cartRow = document.querySelector(".cart-row");
 allShopItems.addEventListener("click", function (e) {
   e.preventDefault();
   const currentElement = e.target;
-  const cartItemCartRow = document.querySelectorAll(".cart-items .cart-row");
-
   const shopItemBtn = currentElement.classList.contains("shop-item-button");
 
   if (shopItemBtn) {
@@ -14,22 +12,6 @@ allShopItems.addEventListener("click", function (e) {
     const shopItemTitle = mainShopItem.querySelector(".shop-item-title");
     const shopItemImage = mainShopItem.querySelector(".shop-item-image");
     const shopItemPrice = mainShopItem.querySelector(".shop-item-price");
-
-    // check cart already exist
-    let cartIsAlreadyExists = false;
-    if (cartItemCartRow?.length > 0) {
-      cartItemCartRow.forEach(function (singleCartRow) {
-        const singleCartTitle = singleCartRow.querySelector(".cart-item-title");
-        if (shopItemTitle?.innerText == singleCartTitle?.innerText) {
-          cartIsAlreadyExists = true;
-        }
-      });
-    }
-    if (cartIsAlreadyExists) {
-      alert("cart already exist");
-      return;
-    }
-    // check cart already exist
 
     const createDiv = document.createElement("div");
     createDiv.className = "cart-row";
@@ -96,18 +78,34 @@ function updateCartTotal() {
 
       total += cartPrice * cartQuantityInput?.value;
 
-      cartQuantityInput.addEventListener("change", function (e) {
-        // e.preventDefault(); yeh nhi aata hai
-        const currentElement = e.target;
-        if (currentElement.value <= 0) {
-          currentElement.value = 1;
-        }
-        updateCartTotal();
-      });
+      // cartQuantityInput.addEventListener("change", function (e) {
+      //   // e.preventDefault(); yeh nhi aata hai
+      //   const currentElement = e.target;
+      //   if (currentElement.value <= 0) {
+      //     currentElement.value = 1;
+      //   }
+      //   updateCartTotal();
+      // });
     });
-
     cartTotalPrice.innerText = `$ ${total.toFixed(2)}`;
   } else {
     cartTotalPrice.innerText = `$ 0`;
   }
+}
+
+function updateCartTotal() {
+  const cartItemCartRow = document.querySelectorAll(".cart-items .cart-row");
+  const cartTotalPrice = document.querySelector(".cart-total-price");
+
+  let total = 0;
+  cartItemCartRow.forEach(function (singleCart) {
+    const cartPriceText = singleCart.querySelector(".cart-price")?.innerText;
+
+    const cartPrice = parseFloat(cartPriceText.replace("$", ""));
+
+    const cartQuantityInput = singleCart.querySelector(".cart-quantity-input");
+
+    total += cartPrice * cartQuantityInput?.value;
+  });
+  cartTotalPrice.innerText = `$ ${total.toFixed(2)}`;
 }
